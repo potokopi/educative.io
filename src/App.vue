@@ -1,16 +1,18 @@
 <template>
-  <NavBar></NavBar>
-  <router-view></router-view>
-  <FooterTemplate></FooterTemplate>
+  <div>  
+    <NavBar />
+    <router-view />
+    <FooterTemplate />
+  </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
-import FooterTemplate from './components/FooterTemplate.vue'
+import NavBar from "./components/NavBar.vue";
+import FooterTemplate from "./components/FooterTemplate.vue";
+
 
 export default {
-  name: 'App',
-  components: {
+  components : {
     NavBar,
     FooterTemplate
   }
@@ -24,6 +26,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
